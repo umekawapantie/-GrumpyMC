@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+	int a[4],i;
+	for (i = 0; i <5; i++)
+	{
+		scanf_s("%d", &a[i]);
+	}
+	int max=0,min=10000;
+	for (i = 0; i < 5; i++)
+	{
+		if (a[i] >= max)
+			max = a[i];
+		else
+		{
+			max = max;
+		}
+	}
+	for (i = 0; i < 5; i++)
+	{
+		if (a[i]<min)
+		{
+			min = a[i];
+		}
+		else
+		{
+			min = min;
+		}
+	}
+	printf("%d  %d", max,min);
+	return 0;
+}
