@@ -1,0 +1,21 @@
+//南阳oj第11题
+#include <stdio.h>
+int main()
+{
+	int input;
+	scanf_s("%d", &input);
+	int t, j, k;
+	for (;input--;input>=0)
+	{
+		scanf_s("%d", &j);
+			for (k = 1; k <= j; k += 2)//打印奇数
+			{
+				printf("%2d", k);
+			}
+			putchar('\n');//换行
+			for (t = 0; t <= j; t += 2)//打印偶数
+			{
+				printf("%2d", t);
+			}
+	}
+}
