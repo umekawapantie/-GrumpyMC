@@ -1,0 +1,13 @@
+//南阳oj第十三题
+#include<stdio.h>
+int main()
+{
+	int f[22],i,input;
+	scanf_s("%d", &input);
+	for (i = 2; i <= input; i++)
+	{
+		f[0] = 0; f[1] = 1;
+		f[i] = f[i - 1] + f[i - 2];
+	}
+	printf("%d", f[input]);
+}
