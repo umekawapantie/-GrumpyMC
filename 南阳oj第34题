@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,k;
+	scanf_s("%d %d %d",&i,&j,&k);
+	int count;
+	for (count = 10; count <= 100; count++)
+	{
+		if (count % 3 == i && count % 5 == j && count % 7 == k)
+		{
+			printf("%d", count);
+			break;
+		}
+		else(count % 3 != i || count % 5 != j || count % 7 != k);
+		{
+			continue;
+		}
+
+	}
+}
