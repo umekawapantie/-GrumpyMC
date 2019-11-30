@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int fun(int n);
+    int a,n,R;
+    scanf("%d",&a);
+    while(a--)
+    {
+        R=0;
+        scanf("%d",&n);
+        for(n;n>0;n--)
+        {
+            R+=fun(n);
+        }
+        printf("%d\n",R);
+    } 
+} 
+int fun(int n)
+{
+    int m;
+    m=n;
+    if(m%2==0)
+    {
+        m=m-1;
+    }
+    if(m==1||m==0)
+        return 1;
+    else
+        return m*fun(m-2);
+}
