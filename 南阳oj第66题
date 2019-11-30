@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+	int k, x, y, n;
+	scanf_s("%d", &n);
+	while (n--)
+	{
+		scanf_s("%d", &k);
+		for (x = (k + 1); x <= 2 * k; x++)
+		{
+			y = (k * x) / (x - k);
+			if ((k * x) % (x - k) == 0)
+			{
+				y = (k * x) / (x - k);
+				printf("1/%d=1/%d+1/%d\n", k, y, x);
+			}
+		}
+	}
+}
