@@ -1,0 +1,24 @@
+#include <stdio.h>
+/*计算一个维度上容纳的边数*/
+int GetSubBoundCount(int l,int subl)
+{
+    int count = l - subl + 1;
+    return count > 0 ? count : 0;
+}
+/*计算可容纳指定尺寸的矩形数*/
+int GetSubRectCount(int w,int h,int subw,int subh)
+{
+    return GetSubBoundCount(w,subw) * GetSubBoundCount(h,subh);
+}
+int main()
+{
+    int w,h;
+    scanf("%d%d",&w,&h);
+    int count = 0;
+    int x,y;
+    for(x=1;x<=w;++x)
+        for(y=1;y<=h;++y)
+            count += GetSubRectCount(w,h,x,y);
+    printf("%d\n",count);
+    return 0;
+}
