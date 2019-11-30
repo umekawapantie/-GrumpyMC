@@ -1,0 +1,18 @@
+#include<stdio.h>  
+#include<math.h>  
+int main()
+{
+	int i, j, k,n,N;
+	double sum;
+	scanf("%d", &n);
+	while (n--)
+	{
+		sum = 0;
+		scanf("%d", &N);
+		for (j = 1; j <= N; j++)
+			sum += log10(j);
+		k = (int)sum + 1;
+		printf("%d\n", k);
+	}
+	return 0;
+}
