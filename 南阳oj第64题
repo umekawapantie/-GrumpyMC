@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n, m,count;
+	scanf_s("%d", &count);
+	int r,c;
+	while (count--)
+	{
+		scanf_s("%d %d", &n, &m);
+		for (r = 0; r <= n; r++)
+		{
+			if ((n - r) == (m - 4 * r) / 2)
+			{
+				break;
+			}
+			else
+				continue;
+		}
+		if(n-r>0)
+		printf("%d %d", n-r, r);
+		else
+		{
+			printf("No answer");
+		}
+	}
+}
