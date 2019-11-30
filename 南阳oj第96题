@@ -1,0 +1,12 @@
+#include
+int main(void)
+{
+int w, n;
+int i, tmp = 1;
+scanf("%d%d", &n, &w);
+for (i = 1; i < n; i++)
+tmp *= 10;
+
+printf("%d\n", w % tmp);
+return 0;
+}
