@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+	int n, i, j, a, b, t, k;
+	scanf("%d", &n);
+	for (k = 0; k < n; k++) {
+		scanf("%d %d", &i, &j);
+		a = i, b = j;
+		if (b % a == 0) printf("%d %d\n", a, i * j / a);
+		else {
+			for (t = 1; t != 0;) {
+				t = a % b;
+				a = b;
+				b = t;
+			}
+			printf("%d %d\n", a, i * j / a);
+		}
+	}
+}
