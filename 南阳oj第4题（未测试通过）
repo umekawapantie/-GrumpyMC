@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	char a, b, c, max, sed, trd; int count;
+	scanf_s("%d", &count);
+	while (count--)
+	{
+		scanf_s("%c%c%c", &a,&b,&c);
+		if (a > b)
+		{
+			max = a;
+			sed = b;
+			trd = c;
+		}
+		else
+		{
+			max = b;
+			sed = a;
+		}
+		if (c >= max)
+		{
+			sed = max;
+			max = c;
+		}
+		else
+		{
+			max = max;
+			switch (c>=sed)
+			{
+			case 1:trd=sed;
+				sed = c;
+				break;
+			default:trd = c;
+				break;
+			}
+		}
+		printf("%c %c %c", max, sed, trd);
+	}
+
+	
+}
