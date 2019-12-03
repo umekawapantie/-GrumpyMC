@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int count, n, i,m[100],k,h,sum=0;
+	scanf_s("%d", &count);
+	while (count--)
+	{
+		scanf_s("%d", &n);
+		for (i = 0; i < n; i++)
+		{
+			scanf_s("%d", &m[i]);
+			k = (int)sqrt((double)m[i]);
+			for (h = 2; h <=k; h++)
+			{
+				if (m[i] % h == 0)
+					break;
+			}
+			if (h > k)
+				sum = m[i] + sum;
+		}
+		printf("%d", sum);
+		sum = 0;
+	}
