@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	int count, n, m;
+	scanf_s("%d", &count);
+	while (count--)
+	{
+		scanf_s("%d %d", &n, &m);
+		if (m < 2 * n)
+			printf("win");
+		else
+		{
+			printf("lose");
+		}
+	}
+}
