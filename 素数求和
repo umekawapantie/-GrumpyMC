@@ -1,0 +1,21 @@
+#include<stdio.h>
+int fun(int n)
+{
+	int n1, i;
+	n1 = n;
+	for (i = 1; i < n1; i++)
+	{
+		n = n * (n1 - i);		
+	}
+	return n;
+}
+int main()
+{
+	int n,n2=0,i;
+	scanf_s("%d", &n);
+	for (i =n; i >0; i--)
+	{
+		n2+=fun(i);
+	}
+	printf("%d", n2);
+}
